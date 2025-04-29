@@ -65,12 +65,12 @@
     /* Import Perpetua Font */
     @font-face {
         font-family: 'Perpetua MT';
-        src: url('/Users/admin/Desktop/Svelet/my-svelte-app/src/Perpetua.ttf') format('truetype');
+        src: url('/src/assets/Perpetua.ttf') format('truetype');
         font-weight: 400;
     }
 
     /* Import Poppins Font */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap'); */
 
     .Venue-block {
         width: 100%;
@@ -108,7 +108,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         width: 100%;
-        max-width: 1200px;
+        /* max-width: 1200px; */
         margin-top: 40px;
     }
 

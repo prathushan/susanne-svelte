@@ -5,6 +5,8 @@
     import Wakes from "./Wakes.svelte";
     import Banner from "./Banner.svelte";
     import ImageTextSection from "./ImageTextSection.svelte";
+  import LeftRightBlocks from "./LeftRightBlocks.svelte";
+  import VenuService from "./VenuService.svelte"
 
 </script>
 
@@ -25,10 +27,19 @@
 <section id="rosys-food">
     <Banner />
 </section>
+<section id="">
+    <LeftRightBlocks />
+</section>
+<section>
+    <VenuService/>
+</section>
 
 <section id="rosys-story">
     <ImageTextSection />
 </section>
+
+
+
 
 <style>
     section {

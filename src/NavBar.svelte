@@ -1,5 +1,5 @@
 <script>
-    import logo from "/Users/admin/Desktop/Svelet/my-svelte-app/src/ROSY'S_LOGO_BLUE_RGB 1.png";
+    import logo from "./assets/rosy-logo.png";
 
     let navLinks = [
         { name: "VENUE & SERVICE", id: "venue-service" },
@@ -24,6 +24,7 @@
 
     <div class="logo">
         <img src="{logo}" alt="Rosy's Logo" />
+        <!-- <img src="./assets/ROSY'S_LOGO_BLUE_RGB 1.png" alt="Rosy's Logo" /> -->
     </div>
 
     <div class="nav-right">
@@ -44,10 +45,10 @@
         box-sizing: border-box;
     }
 
-    body {
-        overflow-x: hidden; 
-        width: 100%;
-    }
+ body{
+    overflow: hidden;
+    width:100%;
+ }
 
     
     .navbar {
@@ -86,7 +87,7 @@
 
     .logo img {
         max-height: 50px;
-        max-width: 100%;
+        /* max-width: 100%; */
     }
 
     

@@ -33,7 +33,7 @@
 
     <div class="banner">
         {#if bannerImage}
-            <img src="{bannerImage}" alt="Banner Image" />
+            <img src="{bannerImage}" alt="" />
         {/if}
     </div>
 </div>
@@ -95,7 +95,7 @@
 
     .banner img {
         width: 100%;
-        max-width: 1200px;
+        /* max-width: 1200px; */
         height: auto;
         border-radius: 10px;
         display: block;
