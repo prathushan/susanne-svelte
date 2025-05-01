@@ -25,7 +25,7 @@ The platform highlights:
 | **Backend**          | Sanity CMS (Content Lake), WebSockets, GROQ                                    |
 | **APIs**             | Sanity API, GROQ, Webhooks                                                     |
 | **Customization**    | Svelte Store, Custom Components, Svelte Routing, Sanity Integration            |
-| **CSS Framework**    | Tailwind CSS (Optional)                                                        |
+| **CSS Framework**    | Tailwind CSS                                                        |
 
 > 🔗 **Backend Source Code**  
 > The backend for Suzanne Eats is built with **Sanity CMS**. You can check out the backend source code here: [GitHub Repo – Suzanne Eats Backend]( https://github.com/prathushan/susanne-sanity.git )
