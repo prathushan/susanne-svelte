@@ -41,7 +41,7 @@
     <div class="container">
         <!-- Left side: Image -->
         <div class="image-box">
-            <img src="{$sectionData.sectionImage}" alt="Section Image" />
+            <img src="{$sectionData.sectionImage}" alt="" />
         </div>
 
         <!-- Right side: Text fields -->
@@ -59,7 +59,7 @@
     .image-text-section {
         width: 100%;
         padding: 60px 0;
-        background-color: #0066cc;
+        background-color: #46C43A;
         
     }
 
@@ -117,4 +117,18 @@
             width: 90%;
         }
     }
+    @media(max-width:480px){
+  p{
+    font-size:14px !important;
+  }
+  h1,  h2{
+    font-size: 20px important;
+  }
+  body h3, body h4{
+    font-size:18px !important;
+  }
+  h5,h6{
+    font-size:16px !important;
+  }
+}
 </style>

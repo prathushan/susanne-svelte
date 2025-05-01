@@ -38,7 +38,7 @@
 
 <style>
      button{
-        background-color:#0066cc;
+        background-color:#46C43A;
         color:#ffffff;
         font-size:18px;
         font-family: 'Poppins', sans-serif;
@@ -62,7 +62,7 @@
     .text-title h2 {
         font-family: 'Perpetua MT', serif;
         font-size: 60px;
-        color: #0066cc;
+        color: #46C43A;
         margin-top:0;
         line-height:80px;
         

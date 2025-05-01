@@ -63,7 +63,7 @@
 
     .Venue-block {
         width: 100%;
-        background-color: #0066cc;
+        background-color: #46C43A;
         display: flex;
         flex-direction: column; 
         align-items: flex-start;

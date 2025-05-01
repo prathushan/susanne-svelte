@@ -67,7 +67,6 @@
     }
     .banner-container {
         width: 100%;
-        height: 600px; 
         background-size: cover;
         background-position: center;
         display: flex;
@@ -77,6 +76,11 @@
         padding: 40px 0;
         margin-top:5%;
         margin-bottom:5%;
+    }
+    @media(min-width:750px){
+        .banner-container{
+            height:600px;
+        }
     }
 
     .content {
@@ -90,7 +94,7 @@
     .description-box {
         flex: 1;
         padding: 20px;
-        background: rgba(0, 102, 204, 0.9);
+        background: #46C43A;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         display: flex;

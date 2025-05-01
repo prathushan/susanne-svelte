@@ -33,16 +33,10 @@ const client = createClient({
   
 
   <style>
-    .image-text-block {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      /* align-items: center; */
-      padding: 1rem 0;
-      background:#0066CC;
-      padding:30px;
-      margin-bottom:10px;
+    .image-text-block{
+      max-width:100%;
     }
+
     
     .images-column {
       display: flex;
@@ -52,8 +46,6 @@ const client = createClient({
     
 
     .images-column img {
-      width: 560px;
-      height: 420px;
       object-fit: cover;
       border-radius: 0.5rem;
     }
@@ -71,15 +63,22 @@ const client = createClient({
       
       font-family: 'Poppins', sans-serif;
     }
-    @media(max-width:420px){
+    @media(max-width:480px){
         .images-column img {
       width: 100%;
       height: auto;
 
     }
+    .text-column p {
+      color: #000;
+    }
     }
 
     @media(min-width:750px){
+      .images-column img {
+      width: 560px;
+      height: 420px;
+      }
         .text-column h2 {
       font-size: 68px;
       line-height: 60px;
@@ -87,6 +86,16 @@ const client = createClient({
     .text-column p {
         font-size:28px;
         line-height: 43px;
+    }
+    .image-text-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      /* align-items: center; */
+      padding: 1rem 0;
+      background:#46C43A;
+      padding:30px;
+      margin-bottom:10px;
     }
     }
     </style>

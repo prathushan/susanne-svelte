@@ -67,15 +67,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media(max-width:480px){
+  body p{
+    font-size:14px !important;
   }
-  a:hover {
-    color: #747bff;
+  #app body h1, #app body h2{
+    font-size: 20px important;
   }
-  button {
-    background-color: #f9f9f9;
+  body h3, body h4{
+    font-size:18px !important;
   }
-} */
+  h5,h6{
+    font-size:16px !important;
+  }
+}

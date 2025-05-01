@@ -74,7 +74,7 @@
 
     .Venue-block {
         width: 100%;
-        background-color: #0066cc;
+        background-color: #46C43A;
         display: flex;
         flex-direction: column;
         padding: 40px;
@@ -131,7 +131,7 @@
         margin-top: 15px;
         font-family: 'Perpetua MT', serif;
         font-size: 55px;
-        color: #002a54;
+        color: #46C43A;
         text-align:left;
         padding:10px;
     }
