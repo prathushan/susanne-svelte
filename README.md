@@ -1,47 +1,58 @@
-# Svelte + Vite
+# Suzanne Eats – Svelte Frontend
 
-This template should help get you started developing with Svelte in Vite.
+This repository contains the **Svelte frontend** for [Suzanne Eats](https://www.suzanneeats.com), a bespoke private catering venue. The Svelte-based frontend interacts with the Sanity CMS to provide a seamless experience for visitors to explore the venue, services, testimonials, and more.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## 🏡 About Suzanne Eats
 
-## Need an official Svelte framework?
+Suzanne Eats is the digital home of a beautifully serene and unique **private dining and celebration venue**. From intimate lunches to joyous family celebrations, the venue offers a refined, warm, and peaceful setting nestled within a lush garden and pavilion space.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+The platform highlights:
+- A Japanese-style all-season pavilion with capacity for seated or standing events
+- Customizable event planning and catering options
+- A unique “Bring Your Own” drinks policy
+- On-site parking and strong public transport connectivity
 
-## Technical considerations
+---
 
-**Why use this over SvelteKit?**
+## 🧰 Tech Stack
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+| Feature             | Stack/Tool                                                                     |
+|---------------------|--------------------------------------------------------------------------------|
+| **Frontend**         | [Svelte](https://svelte.dev/), JavaScript/TypeScript, Sanity UI, Vite          |
+| **Hosting**          | [Vercel](https://vercel.com/)                                                   |
+| **Backend**          | Sanity CMS (Content Lake), WebSockets, GROQ                                    |
+| **APIs**             | Sanity API, GROQ, Webhooks                                                     |
+| **Customization**    | Svelte Store, Custom Components, Svelte Routing, Sanity Integration            |
+| **CSS Framework**    | Tailwind CSS (Optional)                                                        |
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+> 🔗 **Backend Source Code**  
+> The backend for Suzanne Eats is built with **Sanity CMS**. You can check out the backend source code here: [GitHub Repo – Suzanne Eats Backend]( https://github.com/prathushan/susanne-sanity.git )
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+---
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+## ✨ Features
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+- **Dynamic Content**: Displays information fetched from the Sanity CMS, including venue details, services, and testimonials.
+- **Svelte Store**: Manage state and data across the application.
+- **Event Booking**: Display options and services available for booking events at the venue.
+- **Gallery**: Beautiful event and venue photo galleries.
+- **Contact Form**: Integrated form for users to get in touch with the venue.
+- **SEO Optimized**: Pre-rendered HTML for better SEO performance.
+  
+---
 
-**Why include `.vscode/extensions.json`?**
+## 📂 Project Structure
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+```bash
+/
+├── src/
+│   ├── assets/                # Static files such as images
+│   ├── components/            # Reusable Svelte components
+│   ├── routes/                # Svelte routes (pages of the app)
+│   ├── stores/                # Svelte stores for state management
+│   ├── styles/                # Global styles (CSS, Tailwind setup)
+│   └── App.svelte             # Main Svelte application
+├── public/                    # Static assets served (index.html, icons, etc.)
+└── package.json               # Project dependencies and scripts
