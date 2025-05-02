@@ -1,53 +1,59 @@
 <script>
     import { onMount } from "svelte";
     import { createClient } from "@sanity/client";
-
+  
     const client = createClient({
-        projectId: "d28l9drw",
-        dataset: "production",
-        useCdn: true,
-        apiVersion: "2023-01-01",
+      projectId: "d28l9drw", // your project ID
+      dataset: "production",
+      useCdn: true,
+      apiVersion: "2023-01-01",
     });
-
+  
+    let sectionTitle = "";
+    let sectionDescription = "";
     let cards = [];
-
+  
     onMount(async () => {
-        try {
-            const data = await client.fetch(
-                `*[_type == "imageContent"]{
-                    title,
-                    description,
-                    image{asset->{url}}
-                }`
-            );
-
-            if (data) {
-                cards = data;
+      try {
+        const data = await client.fetch(`*[_type == "imageContent"][0]{
+          sectionTitle,
+          sectionDescription,
+          cards[]{
+            title,
+            description,
+            image {
+              asset -> {
+                url
+              }
             }
-        } catch (error) {
-            console.error("Error fetching cards:", error);
-        }
+          }
+        }`);
+  
+        sectionTitle = data?.sectionTitle || "";
+        sectionDescription = data?.sectionDescription || "";
+        cards = data?.cards || [];
+      } catch (error) {
+        console.error("Error fetching content:", error);
+      }
     });
-</script>
-
-<div class="Venue-block">
+  </script>
+  
+  <div class="Venue-block">
     <div class="text">
-        <div class="title">3 reasons to choose Rosy’s</div>
-        <div class="description">
-            As if the location and magical venue weren’t enough, here are 3 reasons why choosing Rosy’s is what makes the most sense: for your wallet, as well as your palate.
-        </div>
+      <div class="title">{sectionTitle}</div>
+      <div class="description">{sectionDescription}</div>
     </div>
-
+  
     <div class="cards">
-        {#each cards as card}
-            <div class="card">
-                <img src="{card.image.asset.url}" alt="{card.title}" />
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-            </div>
-        {/each}
+      {#each cards as card}
+        <div class="card">
+          <img src="{card.image.asset.url}" alt="{card.title}" />
+          <h3>{card.title}</h3>
+          <p>{card.description}</p>
+        </div>
+      {/each}
     </div>
-</div>
+  </div>
 
 <style>
     * {
@@ -84,7 +90,6 @@
     }
 
     .text {
-        max-width: 600px;
         color: white;
     }
 
@@ -153,5 +158,13 @@
         .cards {
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
+
     }
+    @media (min-width: 768px) {
+        .text {
+        max-width: 700px;
+    }
+
+    }
+
 </style>

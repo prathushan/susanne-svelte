@@ -1,7 +1,5 @@
 <script>
   
-
-  
 export const footerQuery = `
   *[_type == "footer"][0] {
     ecoBadge { asset->{url} },
