@@ -7,10 +7,12 @@
     import ImageTextSection from "./ImageTextSection.svelte";
   import LeftRightBlocks from "./LeftRightBlocks.svelte";
   import VenuService from "./VenuService.svelte"
+    import HeaderWrapper from './lib/HeaderWrapper.svelte';
+  </script>
+  
+  <HeaderWrapper />
 
-</script>
 
-<NavBar />
 
 <section id="venue-service">
     <Venue />

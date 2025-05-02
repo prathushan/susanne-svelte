@@ -63,6 +63,10 @@ const client = createClient({
       
       font-family: 'Poppins', sans-serif;
     }
+    .image-text-block {
+
+      background:#46C43A;
+    }
     @media(max-width:480px){
         .images-column img {
       width: 100%;
